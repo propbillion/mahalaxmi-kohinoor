@@ -5401,3 +5401,6 @@ letter-spacing: 0.045em !important;
   pointer-events:none;
 }
 @keyframes hscShine{ 0%{left:-120%;} 55%{left:150%;} 100%{left:150%;} }
+
+/* +20% blur on gated preview images */
+.gated > img { filter: blur(6px) saturate(1.02); }
