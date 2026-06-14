@@ -1,10 +1,10 @@
-// Google Ads Conversion Tracking - Life in Motion
-document.addEventListener('click', function(e) {
-  var el = e.target.closest('a[href*="wa.me"]');
-  if (el && typeof gtag === 'function') {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17833027272/GyWTC26yyJAcEMjNubdC'
-    });
+// Google Ads Conversion Tracking - Life in Motion (WhatsApp + Call)
+document.addEventListener('click', function (e) {
+  if (typeof gtag !== 'function') return;
+  if (e.target.closest('a[href*="wa.me"]')) {
+    gtag('event', 'conversion', { 'send_to': 'AW-17833027272/Na30CJOL874cEMjNubdC' });
+  } else if (e.target.closest('a[href^="tel:"]')) {
+    gtag('event', 'conversion', { 'send_to': 'AW-17833027272/N6sbCIurjb8cEMjNubdC' });
   }
 });/* ============================================
    LIFE IN MOTION - Production JS
@@ -122,6 +122,7 @@ document.addEventListener('click', function(e) {
         'Name%3A+' + encodeURIComponent(name) + '%0A' +
         'Mobile%3A+%2B91+' + encodeURIComponent(mob);
 
+      if (typeof gtag === 'function') { gtag('event', 'conversion', { 'send_to': 'AW-17833027272/Na30CJOL874cEMjNubdC' }); }
       window.open('https://wa.me/918857090799?text=' + message, '_blank');
 
       const btn = form.querySelector('button[type="submit"]');
@@ -173,6 +174,7 @@ document.addEventListener('click', function(e) {
         'Name%3A+' + encodeURIComponent(name) + '%0A' +
         'Mobile%3A+%2B91+' + encodeURIComponent(mob);
 
+      if (typeof gtag === 'function') { gtag('event', 'conversion', { 'send_to': 'AW-17833027272/Na30CJOL874cEMjNubdC' }); }
       window.open('https://wa.me/918857090799?text=' + message, '_blank');
 
       const btn = heroForm.querySelector('button[type="submit"]');
